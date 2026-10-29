@@ -10,10 +10,10 @@ void main() {
             new Student("Pedro", 15.7),
             new Student("Sofia", 18.5)
     };
-
-
+    int passes = 0;
 //Sort
     for (int i = 0; i < students.length; i++) {
+        passes++;
         for (int j = i + 1; j < students.length; j++) {
 
             if (students[j].note > students[i].note) {
@@ -27,7 +27,9 @@ void main() {
 //Print
     for (int i = 0; i < 3 && i < students.length; i++) {
         System.out.println(students[i].name + ": " + students[i].note);
+        passes++;
     }
-
-
+//Iterations
+    System.out.println("Passes: " + passes);
 }
+
